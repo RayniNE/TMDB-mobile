@@ -42,9 +42,9 @@ public interface ApiInterface {
             @Query("with_genres") int with_genres
     );
 
-    @GET("movie/{movieId}/videos?api_key=97a742234f5d50b393ebe860d7e2ba63&language=en-US")
-    Call<MovieTrailer> getMovieCategoryUrl(
-            @Path("movieId") int movieId
+    @GET("search/movie?api_key=97a742234f5d50b393ebe860d7e2ba63&language=en-US&page=1&include_adult=false")
+    Call<BannerMoviesList> getMovieSearch(
+            @Query("query") String query
     );
 
 }

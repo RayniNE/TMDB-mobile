@@ -45,10 +45,10 @@ public class HomeFragment extends Fragment {
     BannerMoviesPagerAdapter bannerMoviesPagerAdapter;
     String videoUrl;
     ArrayList<CategoryItem> homeCatListItem;
-    ArrayList<CategoryItem> homeCatListItem2;;
-    ArrayList<CategoryItem> homeCatListItem3;;
-    ArrayList<CategoryItem> homeCatListItem4;;
-    ArrayList<CategoryItem> homeCatListItem5;;
+    ArrayList<CategoryItem> homeCatListItem2;
+    ArrayList<CategoryItem> homeCatListItem3;
+    ArrayList<CategoryItem> homeCatListItem4;
+    ArrayList<CategoryItem> homeCatListItem5;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -104,6 +104,7 @@ public class HomeFragment extends Fragment {
         homeCatListItem4 = new ArrayList<>();
         homeCatListItem5 = new ArrayList<>();
 
+        getActionMovies(28);
         getComedyMovies(35);
         getFamiliarMovies(10751);
         getHistoryMovies(36);
@@ -111,10 +112,11 @@ public class HomeFragment extends Fragment {
 
         allCategoryArrayList = new ArrayList<>();
 
-        allCategoryArrayList.add(new AllCategory(1, "Comedia", homeCatListItem2));
-        allCategoryArrayList.add(new AllCategory(2, "Familiar", homeCatListItem3));
-        allCategoryArrayList.add(new AllCategory(3, "Historia", homeCatListItem4));
-        allCategoryArrayList.add(new AllCategory(4, "Horror", homeCatListItem5));
+        allCategoryArrayList.add(new AllCategory(1, "Accion", homeCatListItem));
+        allCategoryArrayList.add(new AllCategory(2, "Comedia", homeCatListItem2));
+        allCategoryArrayList.add(new AllCategory(3, "Familiar", homeCatListItem3));
+        allCategoryArrayList.add(new AllCategory(4, "Historia", homeCatListItem4));
+        allCategoryArrayList.add(new AllCategory(5, "Horror", homeCatListItem5));
 
         getAllBanners();
 
@@ -165,7 +167,6 @@ public class HomeFragment extends Fragment {
                     homeBannerList.add(new BannerMovies(id, movieName, imageUrl, fileUrl, estreno, popularity , votos, details, language));
                 }
                 setBannerMoviesPagerAdapter(homeBannerList);
-                getActionMovies(28);
 
 
             }

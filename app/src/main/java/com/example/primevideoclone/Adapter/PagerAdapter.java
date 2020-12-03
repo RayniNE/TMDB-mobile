@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.primevideoclone.Fragments.Family;
 import com.example.primevideoclone.Fragments.HomeFragment;
 import com.example.primevideoclone.Fragments.Movies;
+import com.example.primevideoclone.Fragments.Search;
 import com.example.primevideoclone.Fragments.TvShows;
 
 public class PagerAdapter extends FragmentPagerAdapter {
@@ -36,6 +37,9 @@ public class PagerAdapter extends FragmentPagerAdapter {
 
             case 3:
                 return new Family();
+
+            case 4:
+                return new Search();
         }
 
         return null;

@@ -52,8 +52,10 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
         //Utilizamos la libreria Glide para conseguir la imagen a partir de la direccion y se inserate en el ImageView
         Glide.with(context).load(getItem(position).getImageUrl()).into(holder.itemImage);
         int hola = getItemCount();
+
         Log.i("hola", "" + hola);
         holder.itemImage.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, MovieDetails.class);
@@ -68,6 +70,7 @@ public class ItemRecyclerAdapter extends RecyclerView.Adapter<ItemRecyclerAdapte
                 intent.putExtra("movieDetail", categoryItemArrayList.get(position).getDetails());
                 intent.putExtra("movieLanguage", categoryItemArrayList.get(position).getLanguage());
                 context.startActivity(intent);
+
 
             }
         });
